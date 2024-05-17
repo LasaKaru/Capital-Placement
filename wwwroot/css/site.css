@@ -20,3 +20,21 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.paper-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+    .paper-card h5 {
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+
+.custom-input-size {
+    width: 490px; /* Adjust the width as needed */
+    height: 100px
+}
