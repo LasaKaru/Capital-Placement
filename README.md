@@ -2,6 +2,8 @@
 ## Capital Placement .Net8 ASP.NET Core Web Application
 
 Site Under Development Mode.
+* Figma File
+https://www.figma.com/design/iOMnKWoc8MOm2mY9edGuTX/Creating-dynamic-application-(Community)?node-id=0%3A1&t=fUo1UwXkzRSleuOh-1
 
 * Used - Cosmos Local Emulator / Visual Studio 2022
 
