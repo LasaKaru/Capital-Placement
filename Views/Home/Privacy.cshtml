@@ -1,6 +1,597 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+
+
+
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            
+                
+               
+                    <div class="form-group mb-3">
+                        <!-- Added mb-3 class for margin bottom -->
+                        <label for="email"><b>Program Title *:</b></label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Summer Internship Program" required>
+                    </div>
+
+                <div class="form-group mb-3">
+                    <!-- Added mb-3 class for margin bottom -->
+                    <label for="programDescription"><b>Program Description *:</b></label>
+                    <div id="editor"></div>
+                    <!-- Hidden input field to store the HTML content -->
+                    <input type="hidden" id="programDescription" name="programDescription" placeholder="You can provide all information about the program here. Please make sure to set the expectation and keep it clear
+" required>
+                </div>
+
+                <div class="paper-card">
+
+                    <div class="rounded p-2" style="background-color: rgb(208, 247, 250); color: black;">
+                        <h5 class="text-left mb-6">Personal Information</h5>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="firstName"><b>First Name</b></label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3 text-end">
+                                <label for="firstName">Mandatory Field</label>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+                    
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="firstName"><b>Last Name</b></label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3 text-end">
+                                <label for="firstName">Mandatory Field</label>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+                    
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="firstName"><b>Email</b></label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3 text-end">
+                                <label for="firstName">Mandatory Field</label>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group mb-3">
+                                <label for="phone"><b>Phone (Without dial code)</b></label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="tickbox">
+                                <label class="form-check-label" for="tickbox">Internal</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-end">
+                            <div class="form-group mb-4">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="toggleButton">
+                                    <label class="form-check-label" for="toggleButton">Hide</label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group mb-3">
+                                <label for="phone"><b>Nationality</b></label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="tickbox">
+                                <label class="form-check-label" for="tickbox">Internal</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-end">
+                            <div class="form-group mb-4">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="toggleButton">
+                                    <label class="form-check-label" for="toggleButton">Hide</label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group mb-3">
+                                <label for="phone"><b>Current Residence</b></label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="tickbox">
+                                <label class="form-check-label" for="tickbox">Internal</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-end">
+                            <div class="form-group mb-4">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="toggleButton">
+                                    <label class="form-check-label" for="toggleButton">Hide</label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group mb-3">
+                                <label for="phone"><b>ID Number</b></label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="tickbox">
+                                <label class="form-check-label" for="tickbox">Internal</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-end">
+                            <div class="form-group mb-4">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="toggleButton">
+                                    <label class="form-check-label" for="toggleButton">Hide</label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group mb-3">
+                                <label for="phone"><b>Date of Birth</b></label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="tickbox">
+                                <label class="form-check-label" for="tickbox">Internal</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-end">
+                            <div class="form-group mb-4">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="toggleButton">
+                                    <label class="form-check-label" for="toggleButton">Hide</label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group mb-3">
+                                <label for="phone"><b>Gender</b></label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="tickbox">
+                                <label class="form-check-label" for="tickbox">Internal</label>
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-end">
+                            <div class="form-group mb-4">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="toggleButton">
+                                    <label class="form-check-label" for="toggleButton">Hide</label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+
+
+
+                    
+
+
+                    
+                        
+                    
+                <div class="form-group mb-3 d-flex justify-content-start">
+                    <!-- Added d-flex and justify-content-start classes for flexbox alignment -->
+                    <button type="button" class="btn btn-primary btn-custom-width" id="openQuestionTypeModal">
+                        <b>+</b> Add a question
+                    </button>
+                </div>
+
+                <!-- Modal for selecting question type -->
+                <div class="modal fade" id="selectQuestionTypeModal" tabindex="-1" aria-labelledby="selectQuestionTypeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="selectQuestionTypeModalLabel">Select Question Type</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Form for selecting question type -->
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="questionType">Type:</label>
+                                        <select class="form-select" id="questionType">
+                                            <option value="text">paragraph</option>
+                                            <option value="dropdown">Yes/No</option>
+                                            <option value="date">Dropdown</option>
+                                            <option value="time">Date</option>
+                                            <option value="time">Number</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" id="addQuestionBtn">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="paper-card">
+                <div class="rounded p-2" style="background-color: rgb(208, 247, 250); color: black;">
+                    <h5 class="text-left mb-6">Add Custom Questions</h5>
+                </div>
+               
+                    <div class="form-group mb-3">
+                        <!-- Added mb-3 class for margin bottom -->
+                        <label for="email"><b>Please tell me about yourself in less than 500 words</b></label>
+                        <input type="email" class="form-control custom-input-size" id="email" name="email" placeholder="Please type your answer here" required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <!-- Added mb-3 class for margin bottom -->
+                        <label for="gender"><b>Please select the year of graduation from the list below</b></label>
+                        <select class="form-control" id="gender" name="gender" placeholder="other" required>
+                            <option value="">Other</option>
+                            <option value="Male">2024</option>
+                            <option value="Female">2025</option>
+                            <option value="Other">2026</option> <!-- Fixed duplicate value -->
+                        </select>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Please specify Other" required>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="form-group mb-4">
+                                <label for="ukEmbassyRejection"><b>Have you ever been rejected by the UK embassy?</b></label>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="input-group mb-3">
+                                <div class="input-group-text">
+                                    <!-- Addon for the edit icon -->
+                                    <i class="fas fa-pen" id="openPopupIcon"></i> <!-- Edit icon (Font Awesome) -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal for adding yes/no question -->
+                    <div class="modal fade" id="addYesNoQuestionModal" tabindex="-1" aria-labelledby="addYesNoQuestionModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="addYesNoQuestionModalLabel">Add Yes/No Question</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Form for adding yes/no question -->
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="yesNoQuestion">Question:</label>
+                                            <input type="text" class="form-control" id="yesNoQuestion">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="form-group mb-4">
+                            <label for="ukEmbassyRejection"><b>Please select at least 3 answers from the dropdowns below.</b></label>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="input-group mb-3">
+                            <div class="input-group-text">
+                                <!-- Addon for the edit icon -->
+                                <i class="fas fa-pen" id="openPopupIcon1"></i> <!-- Edit icon (Font Awesome) -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal for adding yes/no question -->
+                <div class="modal fade" id="addYesNoQuestionModal1" tabindex="-1" aria-labelledby="addYesNoQuestionModalLabel1" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="addYesNoQuestionModalLabel1">Multiple Choice Question Template</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Form for adding yes/no question -->
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="yesNoQuestion1">Question:</label>
+                                        <input type="text" class="form-control" id="yesNoQuestion1">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                    
+                    
+                    <div class="form-group mb-3">
+                        <!-- Added mb-3 class for margin bottom -->
+                        <label for="phone"><b>How many years of experience do you have, please enter the number below</b></label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Please type your number here" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <!-- Added mb-3 class for margin bottom -->
+                        <label for="dob"><b>Please provide the date that you have moved to the UK</b></label>
+                        <input type="date" class="form-control" id="dob" name="dob" placeholder="Select the date" required>
+                    </div>
+
+                
+                <div class="form-group mb-3 d-flex justify-content-star">
+                    <!-- Added d-flex and justify-content-end classes for flexbox alignment -->
+                    <button type="submit" class="btn btn-primary btn-custom-width"><b>+</b>  Add a question</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group mb-4 d-flex justify-content-center">
+        <!-- Added d-flex and justify-content-end classes for flexbox alignment -->
+        <button type="submit" class="btn btn-primary btn-custom-width" style="background-color: rgb(58, 194, 112); color: white;">Create program and application</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Initialize Quill editor for program description
+        var quill = new Quill('#editor', {
+            theme: 'snow'
+        });
+
+        // Add event listener to form submission
+        document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get the program description from Quill editor
+            var programDescription = document.querySelector('#programDescription');
+            programDescription.value = quill.root.innerHTML;
+
+            // Collect form data
+            var formData = new FormData(this);
+
+            // Convert FormData to JSON
+            var jsonData = {};
+            formData.forEach((value, key) => {
+                jsonData[key] = value;
+            });
+
+            // Perform form validation (if needed)
+            if (!validateForm(jsonData)) {
+                alert('Please fill out all required fields.');
+                return;
+            }
+
+            // Send data to the server (example using fetch)
+            fetch('your-server-endpoint', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(jsonData),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    alert('Application submitted successfully!');
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('There was an error submitting your application.');
+                });
+        });
+
+        // Function to validate form data
+        function validateForm(data) {
+            for (var key in data) {
+                if (data[key] === '') {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Event listener for opening the question type modal
+        document.getElementById('openQuestionTypeModal').addEventListener('click', function () {
+            var modal = new bootstrap.Modal(document.getElementById('selectQuestionTypeModal'));
+            modal.show();
+        });
+
+        // Event listener for adding a question
+        document.getElementById('addQuestionBtn').addEventListener('click', function () {
+            var questionType = document.getElementById('questionType').value;
+            addQuestion(questionType);
+        });
+
+        // Function to dynamically add a question based on selected type
+        function addQuestion(type) {
+            var container = document.createElement('div');
+            container.classList.add('form-group', 'mb-3');
+
+            var label = document.createElement('label');
+            label.innerHTML = `<b>New Question (${type})</b>`;
+            container.appendChild(label);
+
+            if (type === 'text') {
+                var input = document.createElement('input');
+                input.type = 'text';
+                input.classList.add('form-control');
+                input.placeholder = 'Type your answer here';
+                container.appendChild(input);
+            } else if (type === 'dropdown') {
+                var select = document.createElement('select');
+                select.classList.add('form-control');
+                var option1 = document.createElement('option');
+                option1.value = 'yes';
+                option1.text = 'Yes';
+                var option2 = document.createElement('option');
+                option2.value = 'no';
+                option2.text = 'No';
+                select.appendChild(option1);
+                select.appendChild(option2);
+                container.appendChild(select);
+            }
+            // Add more conditions based on question types as needed
+
+            // Add the container to the form
+            document.querySelector('.paper-card').appendChild(container);
+
+            // Hide the modal
+            var modal = bootstrap.Modal.getInstance(document.getElementById('selectQuestionTypeModal'));
+            modal.hide();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- JavaScript to handle click event of Add a question button and open modal -->
+<script>
+    document.getElementById('openQuestionTypeModal').addEventListener('click', function () {
+        $('#selectQuestionTypeModal').modal('show');
+    });
+
+    document.getElementById('addQuestionBtn').addEventListener('click', function () {
+        var selectedQuestionType = document.getElementById('questionType').value;
+        // Depending on the selectedQuestionType, you can perform further actions
+        console.log("Selected question type: " + selectedQuestionType);
+        // You can add further logic to handle the selected question type (e.g., display another modal)
+    });
+</script>
+
+
+
+
+<script>
+    var quill = new Quill('#editor', {
+        theme: 'snow'
+    });
+
+    // Save HTML content to hidden input field on form submit
+    var form = document.getElementById('programForm');
+    form.onsubmit = function () {
+        var programDescriptionInput = document.getElementById('programDescription');
+        programDescriptionInput.value = quill.root.innerHTML;
+    };
+</script>
+
+
+
+
+
+
+<!-- JavaScript to handle click event of pen icon and open modal -->
+<script>
+    document.getElementById('openPopupIcon').addEventListener('click', function () {
+        $('#addYesNoQuestionModal').modal('show');
+    });
+</script>
+
+<!-- JavaScript to handle click event of pen icon and open modal -->
+<script>
+    document.getElementById('openPopupIcon1').addEventListener('click', function () {
+        $('#addYesNoQuestionModal1').modal('show');
+    });
+</script>

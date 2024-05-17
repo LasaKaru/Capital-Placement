@@ -23,6 +23,16 @@ namespace Capital.Controllers
             return View();
         }
 
+        public IActionResult System()
+        {
+            return View();
+        }
+
+        public IActionResult Application()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
