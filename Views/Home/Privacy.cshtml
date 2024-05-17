@@ -2,9 +2,6 @@
     ViewData["Title"] = "Privacy Policy";
 }
 
-
-
-
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
@@ -13,9 +10,6 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            
-                
-               
                     <div class="form-group mb-3">
                         <!-- Added mb-3 class for margin bottom -->
                         <label for="email"><b>Program Title *:</b></label>
@@ -27,8 +21,7 @@
                     <label for="programDescription"><b>Program Description *:</b></label>
                     <div id="editor"></div>
                     <!-- Hidden input field to store the HTML content -->
-                    <input type="hidden" id="programDescription" name="programDescription" placeholder="You can provide all information about the program here. Please make sure to set the expectation and keep it clear
-" required>
+                    <input type="hidden" id="programDescription" name="programDescription" placeholder="You can provide all information about the program here. Please make sure to set the expectation and keep it clear " required>
                 </div>
 
                 <div class="paper-card">
@@ -49,8 +42,7 @@
                             </div>
                         </div>
                         <hr />
-                    </div>
-                    
+                    </div>  
 
                     <div class="row">
                         <div class="col-md-6">
@@ -64,8 +56,7 @@
                             </div>
                         </div>
                         <hr />
-                    </div>
-                    
+                    </div>  
 
                     <div class="row">
                         <div class="col-md-6">
@@ -218,14 +209,6 @@
                         </div>
                         <hr />
                     </div>
-
-
-
-                    
-
-
-                    
-                        
                     
                 <div class="form-group mb-3 d-flex justify-content-start">
                     <!-- Added d-flex and justify-content-start classes for flexbox alignment -->
@@ -269,8 +252,6 @@
     </div>
 </div>
 
-
-
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -296,7 +277,6 @@
                         </select>
                         <input type="tel" class="form-control" id="phone" name="phone" placeholder="Please specify Other" required>
                     </div>
-
 
                     <div class="row">
                         <div class="col-md-10">
@@ -339,7 +319,6 @@
                         </div>
                     </div>
 
-
                 <div class="row">
                     <div class="col-md-10">
                         <div class="form-group mb-4">
@@ -380,15 +359,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-                    
                     
                     <div class="form-group mb-3">
                         <!-- Added mb-3 class for margin bottom -->
@@ -415,12 +385,6 @@
         <button type="submit" class="btn btn-primary btn-custom-width" style="background-color: rgb(58, 194, 112); color: white;">Create program and application</button>
     </div>
 </div>
-
-
-
-
-
-
 
 <script>
     document.addEventListener('DOMContentLoaded', (event) => {
@@ -533,20 +497,6 @@
     });
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- JavaScript to handle click event of Add a question button and open modal -->
 <script>
     document.getElementById('openQuestionTypeModal').addEventListener('click', function () {
@@ -561,9 +511,6 @@
     });
 </script>
 
-
-
-
 <script>
     var quill = new Quill('#editor', {
         theme: 'snow'
@@ -576,11 +523,6 @@
         programDescriptionInput.value = quill.root.innerHTML;
     };
 </script>
-
-
-
-
-
 
 <!-- JavaScript to handle click event of pen icon and open modal -->
 <script>
